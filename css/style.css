@@ -71,6 +71,11 @@ img {
     margin: 0 auto;
 }
 
+.container-sm {
+    width: 90%;
+    margin: 0 auto;
+}
+
 .center {
     text-align: center;
 }
@@ -362,7 +367,6 @@ header {
 }
 
 /* run */
-
 .run {
     margin-top: 100px;
 }
@@ -371,7 +375,6 @@ header {
     width: var(--container);
     border-radius: 18px;
     background: rgb(34, 34, 34);
-    /* height: 371px; */
     padding: 30px 0;
     display: flex;
     justify-content: space-between;
@@ -398,7 +401,6 @@ header {
     border: none;
 }
 
-
 .run .run-image {
     width: 366px;
     height: 312px;
@@ -408,7 +410,10 @@ header {
     background-repeat: no-repeat;
     margin-right: 32px;
     border-radius: 18px;
+    overflow: hidden;
 }
+
+
 
 
 /* BMI */
@@ -601,13 +606,7 @@ option {
     background-color: var(--bg-primary);
 }
 
-/* .add-to-cart:hover {
-    background-color: #218838;
-}
 
-.buy-now:hover {
-    background-color: #c82333;
-} */
 
 
 /* Meet */
@@ -754,7 +753,7 @@ option {
 .footer > .main-content .right-side {
     display: flex;
     list-style: none;
-    font-size: var(--font-h6);
+    font-size: var(--desc-font-lg);
     align-self: flex-start;
     margin-left: 100px;
     gap: 150px;
@@ -767,14 +766,32 @@ option {
 }
 
 
-.footer .hr-border > hr {
-    background-color: var(--bg-dark);
+footer .hr-border hr {
+    background-color: var(--bg-light);
     margin-top: 36px;
 }
 
-.footer-copy-right p {
+.footer-copy-right {
     padding: 36px 0;
+    margin: 20px 0; /* Add top and bottom margin */
 }
+
+.footer-copy-right p {
+    height: 10px;
+    /* padding: 10px 0; */
+    margin: 20px auto; 
+    text-align: center; 
+}
+
+.hr-border > p {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.hr-border > hr {
+    background-color: var(--bg-dark);
+}
+
 
 /* small devices (up to 576px) */
 @media (max-width: 576px) {
@@ -933,7 +950,7 @@ option {
         max-width: 100%;
         text-align: center;
         max-height: 170px;
-        background-position: 0px -20px;
+        /* background-position: 0px -20px; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -944,12 +961,29 @@ option {
     }
 
     .run .text-content > button {
-        /* border-radius: 42px; */
-        /* background: rgb(230, 83, 60); */
-        /* padding: 16px 40px; */
-        /* font-weight: 600; */
-        /* border: none; */
         width: 100%;
+    }
+
+    .run {
+        margin-top: 50px;
+    }
+
+    .run .text-content > h3 {
+        text-align: left;
+    }
+
+    .run .text-content > p {
+        text-align: left;
+    }
+
+    .run .text-content > button {
+        padding: 12px 30px;
+        
+    }
+    .run .run-image {
+        width: 100%;
+        margin-right: 0;
+        background-position: center;
     }
 
     
@@ -961,7 +995,12 @@ option {
 
     .bmi .h3,
     .bmi .description {
+        margin-top: 16px;
         margin-left: 20px !important;
+    }
+
+    .bmi .description {
+        margin-bottom: 54px;
     }
 
     .bmi .description > br {
