@@ -540,7 +540,7 @@ option {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
-    width: 90%;
+    width: var(--container);
     max-width: 1200px;
     margin-top: 54px;
 }
@@ -941,6 +941,15 @@ option {
 
     .run .text-content > p br {
         display: none;
+    }
+
+    .run .text-content > button {
+        /* border-radius: 42px; */
+        /* background: rgb(230, 83, 60); */
+        /* padding: 16px 40px; */
+        /* font-weight: 600; */
+        /* border: none; */
+        width: 100%;
     }
 
     
